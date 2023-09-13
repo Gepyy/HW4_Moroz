@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,6 +24,10 @@ namespace HW4_Moroz
         public User(int age)
         {
             Age = age;
+            if(Age <= 10)
+            {
+                DoYouBaby = true;
+            }
         }
 
         public override string ToString()

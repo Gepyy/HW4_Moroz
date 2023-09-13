@@ -51,13 +51,9 @@ internal class Program
     }
     public static void Main(string[] args)
     {
-        User user1 = new User();
         string checker = string.Empty;
+        User user1 = new User(GetCheckedAge(checker, "Input Age:"));
         user1.Gender = Gender.mechanic;
-        if (GetCheckedAge(checker, "Input Age:") <= 10)
-        {
-            user1.DoYouBaby = true;
-        }
         user1.Gender = GetCheckedGender(checker, "Input Gender(M/F):");
         user1.FirstName = GetCheckedName(checker, "Input FirstName:");
         user1.LastName  = GetCheckedName(checker, "Input LastName:");
