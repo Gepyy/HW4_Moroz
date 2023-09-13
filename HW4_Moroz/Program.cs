@@ -1,22 +1,12 @@
 ﻿using HW4_Moroz;
-using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
-using static System.Net.Mime.MediaTypeNames;
-
 internal class Program
 {
     public static int GetCheckedAge(string s, string text)
     {
         Console.WriteLine(text);
         s = Console.ReadLine();
-        if (int.TryParse(s, out int result))
-        {
-            return result;
-        }
-        else
-        {
-            return 0;
-        }
+        return int.TryParse(s, out int result)?result:0;
     }
     public static string GetCheckedName(string s, string text)
     {
